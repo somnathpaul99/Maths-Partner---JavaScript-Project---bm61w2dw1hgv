@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Partner</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,17 +15,17 @@
 
 <body>
     <div class="container">
-        <!-- create a upper container -->
-        <div class="upper-container">
+        <!-- create a header-section -->
+        <header class="header-section">
             <h1>Math Partner</h1>
             <!-- create a dom event on click historyButton() -->
-            <input type="button" id="historyBtn" value="HISTORY">
+            <input type="button" class="header-btn" id="historyBtn " value="History" onclick="historyButton()">
             <!-- create a dom event on click saveButton() -->
-            <input type="button" id="saveBtn" value="SAVED SOLUTIONS">
-        </div>
+            <input type="button" class="header-btn" id="saveBtn " value="Saved Solution" onclick="savedButton()">
+        </header>
 
         <!-- create a empty div show some data here -->
-        <div class="historycon">
+        <div class="historyData">
 
         </div>
 
@@ -36,17 +36,17 @@
                     <label for="problemBar">
                         <h2>Problem</h2>
                     </label>
-                    <input type="text" id="problemBar" placeholder="TYPE HERE......">
+                    <input type="text" id="problem-section" placeholder="Type here......">
                 </div>
 
                 <div class="box2">
-                    <label for="categoryBar">
+                    <label for="category-section">
                         <h2>Select Catagory</h2>
                     </label>
                     <!-- create a select option menu -->
-                    <select name="categoryBar" id="categoryBar">
+                    <select name="categoryBar" id="category-section">
                         <!-- create option -->
-                        <option value="simplyfy">Simplyfy</option>
+                        <option value="simplify">Simplify</option>
                         <option value="factor">Factor</option>
                         <option value="derive">Derive</option>
                         <option value="integrate">Integrate</option>
@@ -64,8 +64,8 @@
 
                 <div class="box3">
                     <!-- create a icon -->
-                    <!-- create discription link icon -->
-                    <button type="submit" id="searchBtn"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+                    <button type="submit" id="searchBtn" onclick="SearchButton()"><i
+                            class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
             <!-- create a container inputbox -->
@@ -75,7 +75,8 @@
                 </div>
                 <div class="inputBox2">
                     <!-- create a delete button -->
-                    <button type="reset" id="deleteBtn"><i class="fa-solid fa-trash-can"></i></button>
+                    <button type="reset" id="deleteBtn" onclick="deleteBtn()"><i
+                            class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
         </div>

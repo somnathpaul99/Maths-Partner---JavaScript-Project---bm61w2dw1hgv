@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 4px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://img.freepik.com/free-vector/math-background_23-2148144700.jpg);
+    opacity: 0.6;
+    /* adjust the opacity as needed */
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 49px auto;
+}
+
+.subContainer {
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+
+.header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+.header-section h1 {
+    font-size: 29px;
+    font-weight: 900;
+}
+
+.header-btn {
+    background-color: black;
+    color: white;
+    border-radius: 14px;
+    padding: 3px;
+    font-size: 20px;
+}
+
+
+.middle-container {
+    display: flex;
+    margin-left: 12px;
+
+}
+
+.box1 #problem-section {
+    position: relative;
+    bottom: 5px;
+    left: -9px;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: antiquewhite;
+    color: black;
+    padding: 4px;
+}
+
+.middle-container .box2 #category-section {
+    position: relative;
+    bottom: 6px;
+    left: -6px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 4px;
+
+}
+
+.middle-container .box3 button {
+    position: relative;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    top: 24px;
+    padding: 8px;
+    margin-left: 13px;
+}
+
+.container-input {
+    position: relative;
+    background-color: antiquewhite;
+    color: black;
+    height: 18vw;
+    border-radius: 25px;
+}
+
+.container-input button {
+    position: absolute;
+    top: 80%;
+    left: 92.8%;
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+}
+
+.historyData {
+    position: relative;
+    background-color: antiquewhite;
+    color: black;
+    width: 42%;
+    margin: auto;
+    min-height: 18vh;
+    height: auto;
+    padding-left: 1%;
+    border-radius: 25px;
+    display: none;
+}
+
+.inputBox1 {
+    font-weight: 800;
+    font-size: xx-large;
+    margin-left: 2%;
+}
+
+.inputBox2 {
+    display: flex;
+    height: 75%;
+    align-items: center;
+    margin-left: 7%;
+    font-weight: 600;
+    font-size: x-large;
+}
