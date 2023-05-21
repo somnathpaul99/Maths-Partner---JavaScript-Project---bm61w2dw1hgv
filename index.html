@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <!-- create a header-section -->
         <header class="header-section">
             <h1>Math Partner</h1>
@@ -24,28 +24,27 @@
             <input type="button" class="header-btn" id="saveBtn " value="Saved Solution" onclick="savedButton()">
         </header>
 
-        <!-- create a empty div show some data here -->
-        <div class="historyData">
 
-        </div>
-
-        <!-- create a second section -->
-        <div class="subContainer">
-            <div class="middle-container">
-                <div class="box1">
-                    <label for="problemBar">
+        <!-- this is the main section where user give input and showing result -->
+        <main class="main">
+            <!-- here user give input or math problem -->
+            <div class="main-section">
+                <section class="problem-section">
+                    <label for="problemSection">
                         <h2>Problem</h2>
                     </label>
-                    <input type="text" id="problem-section" placeholder="Type here......">
-                </div>
+                    <input type="text" id="problemSection" placeholder="Type here......">
+                </section>
 
-                <div class="box2">
-                    <label for="category-section">
+
+                <!-- this section for select the category -->
+                <section class="category-section">
+                    <label for="categorySection">
                         <h2>Select Catagory</h2>
                     </label>
                     <!-- create a select option menu -->
-                    <select name="categoryBar" id="category-section">
-                        <!-- create option -->
+                    <select name="categorySection" id="categorySection">
+                        <!-- create option for user-->
                         <option value="simplify">Simplify</option>
                         <option value="factor">Factor</option>
                         <option value="derive">Derive</option>
@@ -60,26 +59,29 @@
                         <option value="abs">Absolute Value</option>
                         <option value="log">Logarithm</option>
                     </select>
-                </div>
+                </section>
 
-                <div class="box3">
+
+                <!-- this section for searching result -->
+                <section class="search-section">
                     <!-- create a icon -->
                     <button type="submit" id="searchBtn" onclick="SearchButton()"><i
                             class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
-                </div>
+                </section>
             </div>
-            <!-- create a container inputbox -->
-            <div class="container-input">
-                <div class="inputBox1">
+                
+            <!-- this section for showing result -->
+            <section class="result-section">
+                <div class="output">
 
                 </div>
-                <div class="inputBox2">
+                <div class="deleteBtn">
                     <!-- create a delete button -->
                     <button type="reset" id="deleteBtn" onclick="deleteBtn()"><i
                             class="fa-solid fa-trash-can"></i></button>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
 </body>
 
