@@ -1,3 +1,4 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,8 @@
     margin-top: 4px;
 }
 
+
+/* backgroud image */
 body::before {
     content: "";
     position: absolute;
@@ -18,6 +21,8 @@ body::before {
     z-index: -1;
 }
 
+
+/* for whole container */
 .container {
     display: flex;
     flex-direction: column;
@@ -25,114 +30,173 @@ body::before {
     margin: 49px auto;
 }
 
-.subContainer {
-    flex-direction: column;
-    margin: 50px auto;
-}
 
-
+/* for header section like h1, history button and saved button */
 .header-section {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 
 .header-section h1 {
-    font-size: 29px;
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 900;
 }
 
 .header-btn {
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     border-radius: 14px;
-    padding: 3px;
+    padding: 5px;
     font-size: 20px;
 }
 
 
-.middle-container {
+/* for main body */
+.main-section{
     display: flex;
-    margin-left: 12px;
-
+    width: 57%;
+    margin: 0 auto;
+    justify-content: space-evenly;
 }
 
-.box1 #problem-section {
+.problem-section #problemSection {
     position: relative;
     bottom: 5px;
     left: -9px;
     border-radius: 25px;
     font-size: 20px;
-    background-color: antiquewhite;
-    color: black;
+    background-color: #ffffff;
+    color: #000000;
     padding: 4px;
 }
 
-.middle-container .box2 #category-section {
+.category-section #categorySection {
     position: relative;
     bottom: 6px;
     left: -6px;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     border-radius: 25px;
     font-size: 20px;
     padding: 4px;
 
 }
 
-.middle-container .box3 button {
+.search-section button {
     position: relative;
-    background-color: antiquewhite;
+    background-color: #ffffff;
     border-radius: 20px;
     top: 24px;
     padding: 8px;
     margin-left: 13px;
 }
 
-.container-input {
+
+.result-section {
     position: relative;
-    background-color: antiquewhite;
-    color: black;
-    height: 18vw;
+    background-color: #ffffff;
+    color: #000000;
+    width: 50%;
+    height: 250px;
+    margin: 0 auto;
     border-radius: 25px;
 }
 
-.container-input button {
+.output{
     position: absolute;
-    top: 80%;
-    left: 92.8%;
+    min-height: fit-content;
+    width: 90%;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.deleteBtn {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
     background-color: transparent;
     border: none;
-    font-size: 22px;
 }
 
-.historyData {
-    position: relative;
-    background-color: antiquewhite;
-    color: black;
-    width: 42%;
-    margin: auto;
-    min-height: 18vh;
-    height: auto;
-    padding-left: 1%;
-    border-radius: 25px;
-    display: none;
+/* this button for history section */
+.delete-button{
+  background-color: #DB005B;
+  color: #ffffff;
+  margin-left: 7px;
+  margin-top: 0;
+  border-radius: 5px;
+  padding: 1px 3px;
 }
 
-.inputBox1 {
-    font-weight: 800;
-    font-size: xx-large;
-    margin-left: 2%;
+/* this key and ans is for display the result to UI */
+.key{
+    text-align: center;
+    margin-top: 20px;
 }
 
-.inputBox2 {
-    display: flex;
-    height: 75%;
+.ans{
+    margin-left: 80px;
+    margin-top: 60px;
+    font-size: 35px;
+}
+
+
+/* this is for localStorage UI */
+.history-storage{
+    text-align: center;
+    margin: 10px;
+    justify-content: center;
     align-items: center;
-    margin-left: 7%;
-    font-weight: 600;
-    font-size: x-large;
+}
+
+
+/* for toast message */
+.toast-message {
+	position: fixed;
+	z-index: 999;
+	top: 2rem;
+	right: 2rem;
+	background-color: #2CD3E1;
+	color: #000;
+	border: 1px solid #fff;
+	border-radius: 0.25rem;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.toast-message-slide-in {
+	animation: toast-animation-in 0.5s ease-in;
+}
+
+.toast-message-slide-out {
+	animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-animation-in {
+	from {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes toast-animation-out {
+	from {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(200px);
+		opacity: 0;
+	}
 }
