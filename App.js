@@ -9,6 +9,8 @@ let expression ;
 
 //when click SearchButton icon this function will fetch from Api and also append the Ans to the UI
 async function SearchButton() {
+   // Clear previous history from UI
+  resultSection.innerHTML = '';
     // console.log("working");
     let problem = document.getElementById("problemSection").value;
     let category = document.getElementById("categorySection").value;
@@ -40,6 +42,19 @@ function savedButton(){
 
 //when click historyButton this function will show all saved history to the UI
 function historyButton() {
+  // Clear previous history from UI
+  resultSection.innerHTML = '';
+
+  //if history is empty then this code will exicute
+  if (localStorage.length === 0) {
+    let p = document.createElement("p");
+    p.innerText = "History is Empty";
+    p.className = "history-storage";
+    resultSection.appendChild(p);
+    return; // Exit the function early if history is empty
+  }
+
+
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
     const value = localStorage.getItem(key);
@@ -59,7 +74,7 @@ function historyButton() {
 
     resultSection.appendChild(p);
 
-     //when click the button this ans will remove ans from local storage
+    // When the delete button is clicked, remove the answer from local storage and UI
     deleteButton.addEventListener('click', (event) => {
       event.stopPropagation(); // Prevent the double-click event from firing
       resultSection.removeChild(p);
@@ -68,8 +83,8 @@ function historyButton() {
       generateToastMessage("This Answer Deleted");
     });
   }
-  
 }
+
 
 
 //when click delete button once it will clear display
@@ -87,17 +102,28 @@ deleteHistory.addEventListener("dblclick", ()=>{
 })
 
 //creating a function for toast messege
-const container = document.getElementById("container")
+const container = document.getElementById("container");
+let currentToast = null;
+
 function generateToastMessage(string) {
+  // Remove previous toast message if it exists
+  if (currentToast) {
+    currentToast.remove();
+    currentToast = null;
+  }
+
   const div = document.createElement("div");
   div.innerText = string;
   div.className = 'toast-message toast-message-slide-in';
+
   div.addEventListener('click', () => {
-      div.classList.remove('toast-message-slide-in')
-      div.classList.add('toast-message-slide-out')
-      div.addEventListener('animationend', () => {
-          div.remove();
-      })
-  })
+    div.classList.remove('toast-message-slide-in');
+    div.classList.add('toast-message-slide-out');
+    div.addEventListener('animationend', () => {
+      div.remove();
+    });
+  });
+
   container.appendChild(div);
+  currentToast = div;
 }
