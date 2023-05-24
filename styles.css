@@ -162,13 +162,14 @@ body::before {
 	z-index: 999;
 	top: 2rem;
 	right: 2rem;
-	background-color: #2CD3E1;
+	background-color: #98EECC;
 	color: #000;
-	border: 1px solid #fff;
+	border: 2px solid #fff;
 	border-radius: 0.25rem;
 	padding: 1rem 2rem;
 	cursor: pointer;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        font-weight: 600;
 }
 
 .toast-message-slide-in {
