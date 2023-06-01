@@ -16,6 +16,9 @@ body::before {
     width: 100%;
     height: 100%;
     background: url(https://img.freepik.com/free-vector/mathematical-geometric-background-vector-gradient-blue-education-remix_53876-114100.jpg?w=996&t=st=1685635160~exp=1685635760~hmac=95056d5737d941b1b9c085ceed43a887d1975873c0410aa814e82b84d7b443c7);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     opacity: 0.6;
     /* adjust the opacity as needed */
     z-index: -1;
