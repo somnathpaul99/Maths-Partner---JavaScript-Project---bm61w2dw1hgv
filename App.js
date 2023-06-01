@@ -35,8 +35,13 @@ async function SearchButton() {
 
 //when click savedButton this function will saved all the details to the localStorage
 function savedButton(){
- localStorage.setItem(`${operation}: ${expression}`, result);
- generateToastMessage("Answer Saved");
+  if (resultSection.innerHTML.trim() === '') {
+    generateToastMessage("Nothing to Save"); // Show a toast message indicating there is nothing to save
+    return; // Exit the function early if resultSection is empty
+  }
+
+  localStorage.setItem(`${operation}: ${expression}`, result);
+  generateToastMessage("Answer Saved");
 
 }
 
@@ -97,8 +102,13 @@ const deleteHistory = document.getElementById("deleteBtn");
 
 //adding an event Listener when dubble click the delete icon it will clear all localStorage history
 deleteHistory.addEventListener("dblclick", ()=>{
-   localStorage.clear();
-   generateToastMessage("Clear All Saved Answer")
+  if (localStorage.length === 0) {
+    generateToastMessage("Nothing to Clear"); // Show a toast message indicating there is nothing to save
+    return; // Exit the function early if history is empty
+  }
+   
+  localStorage.clear();
+  generateToastMessage("Clear All Saved Answer")
 })
 
 //creating a function for toast messege
