@@ -39,6 +39,11 @@ function savedButton(){
     generateToastMessage("Nothing to Save"); // Show a toast message indicating there is nothing to save
     return; // Exit the function early if resultSection is empty
   }
+  
+  if (resultSection.innerText.trim() === 'History is Empty') {
+    generateToastMessage("Nothing to Save"); // Show a toast message indicating there is nothing to save
+    return; // Exit the function early if resultSection displays "History is Empty"
+  }
 
   localStorage.setItem(`${operation}: ${expression}`, result);
   generateToastMessage("Answer Saved");
