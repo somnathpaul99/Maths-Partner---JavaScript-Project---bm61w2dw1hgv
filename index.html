@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Partner</title>
+    <title>Maths Partner</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="queries.css">
     <script defer src="App.js"></script>
 </head>
 
@@ -17,11 +18,13 @@
     <div class="container" id="container">
         <!-- create a header-section -->
         <header class="header-section">
-            <h1>Math Partner</h1>
+            <h1 class="header-h1">Maths Partner</h1>
+            <div class="header-section-second">
             <!-- create a dom event on click historyButton() -->
             <input type="button" class="header-btn" id="historyBtn " value="History" onclick="historyButton()">
             <!-- create a dom event on click saveButton() -->
             <input type="button" class="header-btn" id="saveBtn " value="Saved Solution" onclick="savedButton()">
+        </div>
         </header>
 
 
@@ -36,7 +39,7 @@
                     <input type="text" id="problemSection" placeholder="Type here......">
                 </section>
 
-
+             <div class="main-section-second">
                 <!-- this section for select the category -->
                 <section class="category-section">
                     <label for="categorySection">
@@ -68,6 +71,7 @@
                     <button type="submit" id="searchBtn" onclick="SearchButton()"><i
                             class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
                 </section>
+             </div>
             </div>
                 
             <!-- this section for showing result -->

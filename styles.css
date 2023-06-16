@@ -1,135 +1,145 @@
 /* reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 4px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 4px;
 }
-
 
 /* backgroud image */
 body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(/images/background.jpg) #27374D;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.6;
-    /* adjust the opacity as needed */
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/images/background.jpg) #27374d;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.6;
+  /* adjust the opacity as needed */
+  z-index: -1;
 }
-
 
 /* for whole container */
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 49px auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 49px auto;
 }
-
 
 /* for header section like h1, history button and saved button */
 .header-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 60%;
-    margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 68%;
+  margin: auto;
+}
+
+.header-section-second {
+  margin: 10px;
 }
 
 .header-section h1 {
-    font-size: 40px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 900;
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 900;
 }
 
 .header-btn {
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 14px;
-    padding: 5px;
-    font-size: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 5px;
+  font-size: 20px;
 }
 
-
 /* for main body */
-.main-section{
-    display: flex;
-    width: 57%;
-    margin: 0 auto;
-    justify-content: space-evenly;
+.main-section {
+  display: flex;
+  width: 66%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+}
+
+.main-section-second {
+  display: flex;
+}
+
+.main-section-second #categorySection {
+  margin-top: 8px;
 }
 
 .problem-section #problemSection {
-    position: relative;
-    bottom: 5px;
-    left: -9px;
-    border-radius: 25px;
-    font-size: 20px;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 4px;
+  position: relative;
+  bottom: 5px;
+  left: -4px;
+  border-radius: 25px;
+  font-size: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 7px;
 }
 
 .category-section #categorySection {
-    position: relative;
-    bottom: 6px;
-    left: -6px;
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 25px;
-    font-size: 20px;
-    padding: 4px;
-
+  position: relative;
+  bottom: 6px;
+  left: -6px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 4px;
 }
 
 .search-section button {
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 20px;
-    top: 24px;
-    padding: 8px;
-    margin-left: 13px;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 18px;
+  top: 24px;
+  padding: 10px;
+  margin-left: 13px;
+  font-size: 21px;
+  margin-top: -8px;
 }
-
 
 .result-section {
-    position: relative;
-    background-color: #ffffff;
-    color: #000000;
-    width: 50%;
-    height: 250px;
-    margin: 0 auto;
-    border-radius: 25px;
+  position: relative;
+  background-color: #ffffff;
+  color: #000000;
+  width: 50%;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 25px;
 }
 
-.output{
-    position: absolute;
-    min-height: fit-content;
-    width: 90%;
-    color: #000000;
-    font-size: 25px;
-    font-weight: 600;
-    margin: 0;
+.output {
+  position: absolute;
+  min-height: fit-content;
+  width: 90%;
+  color: #000000;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
 }
 
 .deleteBtn {
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    background-color: transparent;
-    border: none;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  background-color: transparent;
+  border: none;
 }
 
 /* this button for history section */
-.delete-button{
-  background-color: #DB005B;
+.delete-button {
+  background-color: #db005b;
   color: #ffffff;
   margin-left: 7px;
   margin-top: 0;
@@ -138,69 +148,67 @@ body::before {
 }
 
 /* this key and ans is for display the result to UI */
-.key{
-    text-align: center;
-    margin-top: 20px;
+.key {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.ans{
-    margin-left: 80px;
-    margin-top: 60px;
-    font-size: 35px;
+.ans {
+  margin-left: 80px;
+  margin-top: 60px;
+  font-size: 35px;
 }
-
 
 /* this is for localStorage UI */
-.history-storage{
-    text-align: center;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
+.history-storage {
+  text-align: center;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /* for toast message */
 .toast-message {
-	position: fixed;
-	z-index: 999;
-	top: 2rem;
-	right: 2rem;
-	background-color: #00C4FF;
-	color: #000;
-	border: 2px solid #fff;
-	border-radius: 0.25rem;
-	padding: 1rem 2rem;
-	cursor: pointer;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        font-weight: 600;
+  position: fixed;
+  z-index: 999;
+  top: 2rem;
+  right: 2rem;
+  background-color: #00c4ff;
+  color: #000;
+  border: 2px solid #fff;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-weight: 600;
 }
 
 .toast-message-slide-in {
-	animation: toast-animation-in 0.5s ease-in;
+  animation: toast-animation-in 0.5s ease-in;
 }
 
 .toast-message-slide-out {
-	animation: toast-animation-out 0.5s ease-in;
+  animation: toast-animation-out 0.5s ease-in;
 }
 
 @keyframes toast-animation-in {
-	from {
-		transform: translateX(200px);
-		opacity: 0;
-	}
-	to {
-		transform: translateX(0px);
-		opacity: 1;
-	}
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes toast-animation-out {
-	from {
-		transform: translateX(0px);
-		opacity: 1;
-	}
-	to {
-		transform: translateX(200px);
-		opacity: 0;
-	}
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0;
+  }
 }

@@ -1,0 +1,85 @@
+/* for mobile responsive */
+@media (max-width: 450px) {
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    margin: 10px auto;
+  }
+
+  /* header section */
+  .header-section .header-h1 {
+    font-size: 33px;
+    width: auto;
+  }
+  .header-section {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .header-section-second {
+    display: flex;
+    column-gap: 35px;
+    margin-top: 65px;
+    width: 90%;
+  }
+  .header-section .header-btn {
+    font-size: 15px;
+  }
+
+  /* for main section */
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+    font-size: 14px;
+  }
+  .main-section-second {
+    display: flex;
+  }
+  .result-section {
+    width: 80%;
+  }
+  .problem-section #problemSection {
+    width: 116%;
+  }
+  .category-section #categorySection {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .category-section h2 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .main-section-second .search-section {
+    margin-left: 12px;
+  }
+
+  /* for toast message */
+  .toast-message {
+    top: 4rem;
+    padding: 0.5rem 1rem;
+    font-size: 11px;
+  }
+
+  /* for result */
+  .ans {
+    margin-left: 50px;
+    margin-top: 55px;
+    font-size: 25px;
+  }
+
+  .key {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  .history-storage {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+  }
+  .delete-button {
+    font-size: 0.7rem;
+  }
+}
